@@ -1,0 +1,301 @@
+<div class="container-fluid nav-bar">
+  <!--Navbar-->
+  <mdb-navbar SideClass="navbar navbar-1 navbar-dark purple" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand>
+      <a class="navbar-brand" href="#">TRAVELLIA.com</a>
+    </mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect>Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Add Your Propeties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Account</a>
+        </li>
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+
+  </mdb-navbar>
+  <!--/.Navbar-->
+</div>
+
+
+<!-- main-body -->
+
+<div class="container-fluid main-body">
+  <div class="row">
+    <div class="col-lg-4 des-panel">
+      <form class="form-inline md-form form-sm active-cyan-2 search-bar">
+        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search Destinations" aria-label="Search"
+          mdbInputDirective>
+        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+      </form>
+
+      <p>
+        Sri Lanka (formerly Ceylon) is an island nation south of
+        India in the Indian Ocean. Its diverse landscapes range from
+        rainforest and arid plains to highlands and sandy beaches.
+        It’s famed for its ancient Buddhist ruins, including the
+        5th-century citadel Sigiriya, with its palace and frescoes.
+        The city of Anuradhapura, Sri Lanka's ancient capital,
+        has many ruins dating back more than 2,000 years.
+      </p>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-6 booking-panel">
+      <div>
+
+        <div class="md-form">
+          <input mdbInputDirective type="text" id="form1" class="form-control">
+          <label for="form1" class="">Where Are You Going?</label>
+        </div>
+
+
+        <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t">
+        </ngb-datepicker>
+
+        <ng-template #t let-date="date" let-focused="focused">
+          <span class="custom-day" [class.focused]="focused" [class.range]="isRange(date)" [class.faded]="isHovered(date) || isInside(date)"
+            (mouseenter)="hoveredDate = date" (mouseleave)="hoveredDate = null">
+            {{ date.day }}
+          </span>
+        </ng-template>
+
+        <hr>
+        <!--             
+            <pre>From: {{ fromDate | json }} </pre>
+            <pre>To: {{ toDate | json }} </pre> -->
+
+      </div>
+      <div class="md-form">
+        <input mdbInputDirective type="text" id="form1" class="form-control">
+        <label for="form1" class="">Howe Much Rooms Which You Want</label>
+      </div>
+      <div class="find">
+        <button mdbBtn type="button" color="primary" class="waves-light" mdbWavesEffect>Find</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- /main-body -->
+
+
+<!-- cards -->
+
+<div class="container cards">
+  <div class="row card-title">
+    <h2 class=""> Get inspiration for your next trip</h2>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <mdb-card>
+        <!--Card image-->
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+        <!--Card content-->
+        <mdb-card-body>
+
+          <!--Title-->
+          <mdb-card-title>
+            <h4>Card Title</h4>
+          </mdb-card-title>
+
+          <!--Text-->
+          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+            content. </mdb-card-text>
+
+          <a href="#" class="btn btn-primary waves-light" mdbWavesEffect>Button</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+    <div class="col-lg-4">
+      <mdb-card>
+        <!--Card image-->
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+        <!--Card content-->
+        <mdb-card-body>
+
+          <!--Title-->
+          <mdb-card-title>
+            <h4>Card Title</h4>
+          </mdb-card-title>
+
+          <!--Text-->
+          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+            content. </mdb-card-text>
+
+          <a href="#" class="btn btn-primary waves-light" mdbWavesEffect>Button</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+    <div class="col-lg-4">
+      <mdb-card>
+        <!--Card image-->
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+        <!--Card content-->
+        <mdb-card-body>
+
+          <!--Title-->
+          <mdb-card-title>
+            <h4>Card Title</h4>
+          </mdb-card-title>
+
+          <!--Text-->
+          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+            content. </mdb-card-text>
+
+          <a href="#" class="btn btn-primary waves-light" mdbWavesEffect>Button</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </div>
+</div>
+<div class="row space"></div>
+<div class="container cards">
+  <div class="row card-title">
+    <h2 class=""> Still deciding where to stay?</h2>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <mdb-card>
+        <!--Card image-->
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+        <!--Card content-->
+        <mdb-card-body>
+
+          <!--Title-->
+          <mdb-card-title>
+            <h4>Card Title</h4>
+          </mdb-card-title>
+
+          <!--Text-->
+          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+            content. </mdb-card-text>
+
+          <a href="#" class="btn btn-primary waves-light" mdbWavesEffect>Button</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+    <div class="col-lg-6">
+      <mdb-card>
+        <!--Card image-->
+        <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img>
+        <!--Card content-->
+        <mdb-card-body>
+
+          <!--Title-->
+          <mdb-card-title>
+            <h4>Card Title</h4>
+          </mdb-card-title>
+
+          <!--Text-->
+          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+            content. </mdb-card-text>
+
+          <a href="#" class="btn btn-primary waves-light" mdbWavesEffect>Button</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </div>
+</div>
+<!-- cards -->
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">Footer Content</h5>
+          <p>Here you can use rows and columns here to organize your footer content.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/angular/angular-tutorial/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->

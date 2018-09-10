@@ -1,0 +1,84 @@
+/* navbar-styles */
+
+.navbar.navbar-2 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+  
+  .active-cyan input[type=text] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+  
+  .active-cyan .fa,
+  .active-cyan-2 .fa {
+    color: #4dd0e1;
+  }
+  
+  .nav-bar{
+      padding: 0px;
+      
+  }
+
+  /* /navbar-styles */
+
+.main-body{
+    padding: 50px 150px 50px 150px;
+    background-image: url(../../assets/bg3.jpg);
+    background-size: cover;
+    
+}
+
+.booking-panel{
+    background-color: white;
+    padding: 20px;
+    opacity: .8;
+    border-radius: 3px;
+}
+
+.des-panel{
+    background-color: white;
+    opacity: .8;
+    border-radius: 3px;
+}
+
+
+  /* date-picker */
+
+  .custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+  }
+
+   /* date-picker */
+
+
+   /* card */
+
+
+   .cards{
+       padding: 50px;
+   }
+
+   .card-title{
+       padding: 0px;
+   }
+
+   /* card */
