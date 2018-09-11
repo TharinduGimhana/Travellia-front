@@ -29,8 +29,22 @@
     <!-- Collapsible content -->
 
   </mdb-navbar>
+
+
+  
   <!--/.Navbar-->
 </div>
+
+<script>
+    $(window).on('scroll',function(){
+      if($(window).scrollTop()>160){
+        $('.nav-bar').addClass('nav-bar');
+      }
+      else{
+        $('.nav-bar').removeClass('nav-bar');
+      }
+    })
+  </script>
 
 
 <!-- main-body -->
@@ -38,12 +52,13 @@
 <div class="container-fluid main-body">
   <div class="row">
     <div class="col-lg-4 des-panel">
-      <form class="form-inline md-form form-sm active-cyan-2 search-bar">
-        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search Destinations" aria-label="Search"
-          mdbInputDirective>
-        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-      </form>
-
+      <div class="search-des">
+        <label for="typeahead-format">Review Your Destinations</label>
+        <input id="typeahead-format" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"
+          [resultFormatter]="formatter" />
+        <hr>
+        <pre>Model: {{ model | json }}</pre>
+      </div>
       <p>
         Sri Lanka (formerly Ceylon) is an island nation south of
         India in the Indian Ocean. Its diverse landscapes range from
@@ -58,9 +73,12 @@
     <div class="col-lg-6 booking-panel">
       <div>
 
-        <div class="md-form">
-          <input mdbInputDirective type="text" id="form1" class="form-control">
-          <label for="form1" class="">Where Are You Going?</label>
+        <div class="sel-des">
+          <label for="typeahead-format">Select Your Destinations</label>
+          <input id="typeahead-format" type="text" class="form-control" [(ngModel)]="modeltwo" [ngbTypeahead]="sel"
+            [resultFormatter]="formatte" />
+          <hr>
+          <pre>Modeltwo: {{ modeltwo | json }}</pre>
         </div>
 
 
@@ -219,83 +237,83 @@
 <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">
 
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
 
-      <!-- Grid row -->
-      <div class="row">
+    <!-- Grid row -->
+    <div class="row">
 
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
 
-          <!-- Content -->
-          <h5 class="text-uppercase">Footer Content</h5>
-          <p>Here you can use rows and columns here to organize your footer content.</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
-          </div>
-          <!-- Grid column -->
+        <!-- Content -->
+        <h5 class="text-uppercase">Footer Content</h5>
+        <p>Here you can use rows and columns here to organize your footer content.</p>
 
       </div>
-      <!-- Grid row -->
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
 
     </div>
-    <!-- Footer Links -->
+    <!-- Grid row -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/angular/angular-tutorial/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
+  </div>
+  <!-- Footer Links -->
 
-  </footer>
-  <!-- Footer -->
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/angular/angular-tutorial/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

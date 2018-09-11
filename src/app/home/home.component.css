@@ -21,16 +21,21 @@
   
   .nav-bar{
       padding: 0px;
+      position: fixed;
+      z-index: 1;
+      
       
   }
+
+
 
   /* /navbar-styles */
 
 .main-body{
-    padding: 50px 150px 50px 150px;
+    padding: 100px 150px 50px 150px;
     background-image: url(../../assets/bg3.jpg);
     background-size: cover;
-    
+    background-attachment: fixed;
 }
 
 .booking-panel{
@@ -44,6 +49,7 @@
     background-color: white;
     opacity: .8;
     border-radius: 3px;
+    padding: 20px;
 }
 
 
