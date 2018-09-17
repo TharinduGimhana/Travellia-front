@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="row acounts">
+    <h2>Accounts</h2>
+    
+    <p>
+      A login, logging in or logging on is the entering of
+      identifier information into a system by a user in order
+      to access that system (e.g., a computer or a website).
+      It is an integral part of computer security procedures.
+      A user name, also referred to as an account name, is
+      a string (i.e., sequence of characters) that uniquely
+      identifies a user. User names can be the same as or related
+      to the real names of users, or they can be completely arbitrary.
+    </p>
+
+  </div>
+  
+</div>
+
+<!-- login -->
+
+<div class="container">
+  <div class="row login-signup">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+        (click)="frame.show()" mdbWavesEffect>SIGN IN</button>
+
+      <div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mx-3">
+              <div class="md-form mb-5">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input type="email" id="defaultForm-email" [formControl]="loginFormModalEmail" class="form-control validate"
+                  mdbInputDirective>
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+              </div>
+
+              <div class="md-form mb-4">
+                <i class="fa fa-lock prefix grey-text"></i>
+                <input type="password" id="defaultForm-pass" [formControl]="loginFormModalPassword" class="form-control validate"
+                  mdbInputDirective>
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+              </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button mdbBtn color="default" class="waves-light" mdbWavesEffect>Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- login -->
+
+
+
+      <!-- signup -->
+
+
+      <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+        (click)="frame2.show()" mdbWavesEffect>Sign Up</button>
+
+      <div mdbModal #frame2="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame2.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mx-3">
+              <div class="md-form mb-5">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input type="text" id="orangeForm-name" class="form-control validate" [formControl]="signupFormModalName"
+                  mdbInputDirective>
+                <label data-error="wrong" data-success="right" for="orangeForm-name">First name</label>
+              </div>
+              <div class="md-form mb-5">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input type="text" id="orangeForm-name" class="form-control validate" [formControl]="signupFormModalName"
+                  mdbInputDirective>
+                <label data-error="wrong" data-success="right" for="orangeForm-name">Last name</label>
+              </div>
+              <div class="md-form mb-5">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input type="email" id="orangeForm-email" class="form-control validate" [formControl]="signupFormModalEmail"
+                  mdbInputDirective>
+                <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
+              </div>
+
+              <div class="md-form mb-4">
+                <i class="fa fa-lock prefix grey-text"></i>
+                <input type="password" id="orangeForm-pass" class="form-control validate" [formControl]="signupFormModalPassword"
+                  mdbInputDirective>
+                <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+              </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button mdbBtn color="deep-orange" class="waves-light" mdbWavesEffect>Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>
+
+
+<!-- signup -->

@@ -1,0 +1,17 @@
+.acounts h2{
+   text-align: center;
+   margin: auto;
+   padding: 20px;
+   color: #2bbbad;
+}
+
+.acounts p{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+ }
+
+ .login-signup{
+     padding: 50px 100px 50px 100px;
+     
+ }

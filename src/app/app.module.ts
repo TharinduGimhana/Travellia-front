@@ -4,19 +4,24 @@ import { HomeComponent } from './home/home.component';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { Materials } from './material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthenticationComponent } from './authentication/authentication.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    AuthenticationComponent,
+   
    
   ],
   imports: [
     BrowserModule,
     FormsModule, 
     ReactiveFormsModule,
-    Materials
+    Materials,
+   
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
