@@ -3,6 +3,15 @@ import {NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import {Observable} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 
+
+
+
+export interface Food {
+  value: string;
+  viewValue: string;
+}
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,6 +26,15 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: '1'},
+    {value: 'pizza-1', viewValue: '2'},
+    {value: 'tacos-2', viewValue: '3'},
+    {value: 'steak-3', viewValue: '4'},
+    {value: 'pizza-4', viewValue: '5'},
+    {value: 'tacos-5', viewValue: '6'}
+  ];
 
 // date-range-picker
 

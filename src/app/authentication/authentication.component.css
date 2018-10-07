@@ -1,3 +1,11 @@
+.nav-bar{
+    padding: 0px;
+    position: fixed;
+    z-index: 1;
+    
+    
+}
+
 .acounts h2{
    text-align: center;
    margin: auto;
@@ -12,6 +20,21 @@
  }
 
  .login-signup{
-     padding: 50px 100px 50px 100px;
+     padding: 0px 100px 50px 100px;
      
+ }
+
+ .modal-footer{
+     margin: auto !important;
+     text-align: center !important;
+ }
+
+ .signupbtn{
+    margin: auto !important;
+    text-align: center !important;
+    float: right;
+ }
+ .btn{
+    margin: auto !important;
+    text-align: center !important;
  }

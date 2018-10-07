@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HotellistComponent } from './hotellist/hotellist.component';
 import { HotelComponent } from './hotel/hotel.component';
 import { DestinationComponent } from './destination/destination.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -22,19 +24,30 @@ import { DestinationComponent } from './destination/destination.component';
     HotellistComponent,
     HotelComponent,
     DestinationComponent,
- 
-   
-   
+
+
+
   ],
   imports: [
     BrowserModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     Materials,
-    HttpClientModule
-   
+    HttpClientModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot([
+      {
+        path:'authentication',
+        component:AuthenticationComponent
+      },
+      {
+        path: '',
+        component: HomeComponent
+      }
+    ])
+
   ],
-  schemas: [ NO_ERRORS_SCHEMA ],
+  schemas: [NO_ERRORS_SCHEMA],
   providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
