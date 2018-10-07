@@ -1,0 +1,102 @@
+/* navbar-styles */
+
+.navbar.navbar-2 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+
+
+
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid purple;
+    box-shadow: 0 1px 0 0 #e659f8;
+  }
+  
+  .active-cyan input[type=text] {
+    border-bottom: 1px solid purple;
+    box-shadow: 0 1px 0 0 #e659f8;
+  }
+  
+  .active-cyan .fa,
+  .active-cyan-2 .fa {
+    color: purple;
+  }
+  
+  .nav-bar{
+      padding: 0px;
+      position: fixed;
+      z-index: 1;
+      
+      
+  }
+
+
+
+  /* /navbar-styles */
+
+
+.carousel{
+    width: 100%;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+
+.carousel img {
+    width: 100%;
+    background-size: cover;
+    height: 450px;
+}
+
+.hotelname{
+    padding: 80px 20px 10px 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.hotelname h2{
+    margin: auto;
+}
+
+.hoteladrs h6{
+    margin: auto;
+}
+
+.hoteladrs{
+    padding: 0px 20px 10px 20px;
+}
+
+.des{
+    padding: 50px 0px 30px 0px;
+    text-align: justify;
+}
+
+.table{
+    padding: 10px 0px 0px 20px;
+}
+
+.loction{
+    padding: 20px 0px 20px 0px;
+}
+
+.loction h3{
+    margin: auto;
+}
+
+.mapbox{
+    
+    height: 500px;
+    background-color: lightblue;
+}
+
+.mapbox h1{
+    margin: auto;
+    text-align: center;
+}
+
+.gmap{
+    padding: 20px 0px 100px 0px;
+}
+
+.gmapbox{
+    padding: 0px 15px 0px 15px;
+}

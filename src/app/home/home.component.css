@@ -4,19 +4,21 @@
     background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
 }
 
+
+
 .active-cyan-2 input[type=text]:focus:not([readonly]) {
-    border-bottom: 1px solid #4dd0e1;
-    box-shadow: 0 1px 0 0 #4dd0e1;
+    border-bottom: 1px solid purple;
+    box-shadow: 0 1px 0 0 #e659f8;
   }
   
   .active-cyan input[type=text] {
-    border-bottom: 1px solid #4dd0e1;
-    box-shadow: 0 1px 0 0 #4dd0e1;
+    border-bottom: 1px solid purple;
+    box-shadow: 0 1px 0 0 #e659f8;
   }
   
   .active-cyan .fa,
   .active-cyan-2 .fa {
-    color: #4dd0e1;
+    color: purple;
   }
   
   .nav-bar{
@@ -66,11 +68,11 @@
     background-color: #e6e6e6;
   }
   .custom-day.range, .custom-day:hover {
-    background-color: rgb(2, 117, 216);
+    background-color: rgb(191, 2, 216);
     color: white;
   }
   .custom-day.faded {
-    background-color: rgba(2, 117, 216, 0.5);
+    background-color: rgba(184, 47, 189, 0.5);
   }
 
    /* date-picker */

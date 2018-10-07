@@ -1,0 +1,71 @@
+/* navbar-styles */
+
+.navbar.navbar-2 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+
+
+
+.purple {
+    background-color: #4dd0e1 !important;
+}
+
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+  
+  .active-cyan input[type=text] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+  
+  .active-cyan .fa,
+  .active-cyan-2 .fa {
+    color: #4dd0e1;
+  }
+  
+  .nav-bar{
+      padding: 0px;
+      position: fixed;
+      z-index: 1;
+      
+      
+  }
+
+
+
+  /* /navbar-styles */
+
+
+  /* dest-des */
+
+  .dest-des{
+      text-align: center;
+      padding: 40px;
+  }
+
+   /* /dest-des */
+
+
+   /* hotellist */
+
+   .hotellist{
+       /* padding: 0px 100px 30px 100px; */
+   }
+
+   .hotelpanel{
+    padding: 0px 100px 50px 100px;
+   }
+
+     /*/ hotellist */
+
+
+     .pagination{
+         padding: 0px 100px 20px 100px;
+     }
+     
+     .btn {
+         text-align: right !important;
+         float: right!important; 
+     }

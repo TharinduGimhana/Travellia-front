@@ -22,7 +22,7 @@
 <div class="container">
   <div class="row login-signup">
     <div class="col-lg-4"></div>
-    <div class="col-lg-4">
+    <div class="col-lg-4" [formGroup]="myForm">
       <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
         (click)="frame.show()" mdbWavesEffect>SIGN IN</button>
 
@@ -85,33 +85,37 @@
             <div class="modal-body mx-3">
               <div class="md-form mb-5">
                 <i class="fa fa-user prefix grey-text"></i>
-                <input type="text" id="orangeForm-name" class="form-control validate" [formControl]="signupFormModalName"
+                <input type="text" id="orangeForm-name" formControlName="firstName" class="form-control validate" [formControl]="signupFormModalName"
                   mdbInputDirective>
                 <label data-error="wrong" data-success="right" for="orangeForm-name">First name</label>
               </div>
               <div class="md-form mb-5">
                 <i class="fa fa-user prefix grey-text"></i>
-                <input type="text" id="orangeForm-name" class="form-control validate" [formControl]="signupFormModalName"
+                <input type="text" id="orangeForm-name" formControlName="lastName" class="form-control validate" [formControl]="signupFormModalName"
                   mdbInputDirective>
                 <label data-error="wrong" data-success="right" for="orangeForm-name">Last name</label>
               </div>
               <div class="md-form mb-5">
                 <i class="fa fa-envelope prefix grey-text"></i>
-                <input type="email" id="orangeForm-email" class="form-control validate" [formControl]="signupFormModalEmail"
+                <input type="email" id="orangeForm-email" formControlName="email" class="form-control validate" [formControl]="signupFormModalEmail"
                   mdbInputDirective>
                 <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
               </div>
 
               <div class="md-form mb-4">
                 <i class="fa fa-lock prefix grey-text"></i>
-                <input type="password" id="orangeForm-pass" class="form-control validate" [formControl]="signupFormModalPassword"
+                <input type="password" id="orangeForm-pass" formControlName="password" class="form-control validate" [formControl]="signupFormModalPassword"
                   mdbInputDirective>
                 <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
               </div>
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
-              <button mdbBtn color="deep-orange" class="waves-light" mdbWavesEffect>Sign up</button>
+              <button mdbBtn color="deep-orange" (click)="register()" class="waves-light" mdbWavesEffect>Sign up</button>
+            </div>
+
+            <div class="" style="text-align:center;">
+              {{successMessage}}
             </div>
           </div>
         </div>

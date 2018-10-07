@@ -1,0 +1,259 @@
+<div class="container-fluid nav-bar">
+  <!--Navbar-->
+  <mdb-navbar SideClass="navbar navbar-1 navbar-dark purple" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand>
+      <a class="navbar-brand" href="#">TRAVELLIA.com</a>
+    </mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect>Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Add Your Propeties</a>
+        </li>
+        <li class="nav-item">
+          <a href="./authentication/authentication.component.html" class="nav-link waves-light" mdbWavesEffect>Account</a>
+        </li>
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+
+  </mdb-navbar>
+
+
+
+  <!--/.Navbar-->
+</div>
+
+
+<div class="container-fluid">
+  <div class="row hotelname">
+    <h2 class="tite">Mermaid Hotel & Club</h2>
+  </div>
+  <div class="row hoteladrs">
+    <h6 class="tite">Galle Road, 12000 Kalutara, Sri Lanka</h6>
+  </div>
+</div>
+
+<div class="container">
+  <div class=" carousel">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <img [src]="images[0]" alt="Random first slide">
+        <div class="carousel-caption">
+          <h3>10 seconds between slides...</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[1]" alt="Random second slide">
+        <div class="carousel-caption">
+          <h3>No mouse events...</h3>
+          <p>This carousel doesn't pause or resume on mouse events</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[2]" alt="Random third slide">
+        <div class="carousel-caption">
+          <h3>No keyboard...</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[3]" alt="Random fourth slide">
+        <div class="carousel-caption">
+          <h3>And no wrap after last slide.</h3>
+          <p>This carousel uses customized default values.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="des col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <p>
+        This property is 1 minute walk from the beach. Mermaid Hotel & Club is located at Mahawaskaduwa fishing village
+        in Kalutara, about 39 km from Colombo. This tropical retreat features 2 outdoor pools, a health spa and free
+        parking.
+
+        Rooms at Mermaid Hotel are simply furnished and come with private balconies or terraces. Each has a CD player
+        and satellite TV. Hot tea, coffee and snacks are available with the minibar.
+
+        Sahana Spa features relaxing massage treatments, as well as yoga and aerobics classes. Guests can play a game
+        of water polo or join water aerobics class at the swimming pool. Mermaid also provides a games room.
+
+        Overlooking the ocean, Mermaid Hotel’s restaurant serves fresh seafood dishes. Drinks and cocktails can be
+        enjoyed at any one of the 4 hotel bars.
+
+        Mermaid Hotel & Club is 74 km from Colombo International Airport.
+
+        Couples particularly like the location — they rated it 8.4 for a two-person trip.
+
+        We speak your language!
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Room type</th>
+        <th scope="col">Sleeps</th>
+        <th scope="col">Quntity</th>
+        <th scope="col">Price</th>
+        <th scope="col">     </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Superior double room</th>
+        <td>2</td>
+        <td>5</td>
+        <td>200$</td>
+        <td><button mdbBtn type="button" color="secondary" class="waves-light" mdbWavesEffect>
+          Book Now
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">Superior triple room</th>
+        <td>3</td>
+        <td>4</td>
+        <td>300$</td>
+        <td><button mdbBtn type="button" color="secondary" class="waves-light" mdbWavesEffect>
+            Book Now
+          </button></td>
+      </tr>
+      <tr>
+        <th scope="row">Delux double room</th>
+        <td>5</td>
+        <td>7</td>
+        <td>300$</td>
+        <td><button mdbBtn type="button" color="secondary" class="waves-light" mdbWavesEffect>
+            Book Now
+          </button></td>
+      </tr>
+      <tr>
+        <th scope="row">Premium room</th>
+        <td>7</td>
+        <td>8</td>
+        <td>100$</td>
+        <td><button mdbBtn type="button" color="secondary" class="waves-light" mdbWavesEffect>
+            Book Now
+          </button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container gmap">
+  <div class="row loction">
+      <h3>Location</h3>
+  </div>
+
+  <div class="row gmapbox">
+    <div class="mapbox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h1>Google Map</h1>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small purple pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase">Footer Content</h5>
+          <p>Here you can use rows and columns here to organize your footer content.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/angular/angular-tutorial/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->

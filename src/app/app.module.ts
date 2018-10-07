@@ -5,6 +5,12 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { Materials } from './material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationComponent } from './authentication/authentication.component';
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HotellistComponent } from './hotellist/hotellist.component';
+import { HotelComponent } from './hotel/hotel.component';
+import { DestinationComponent } from './destination/destination.component';
+
 
 
 
@@ -13,6 +19,10 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     AppComponent,
     HomeComponent,
     AuthenticationComponent,
+    HotellistComponent,
+    HotelComponent,
+    DestinationComponent,
+ 
    
    
   ],
@@ -21,10 +31,11 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     FormsModule, 
     ReactiveFormsModule,
     Materials,
+    HttpClientModule
    
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
