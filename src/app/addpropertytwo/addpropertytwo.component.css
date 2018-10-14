@@ -1,0 +1,31 @@
+.nav-bar{
+    padding: 0px;
+    position: fixed;
+    z-index: 1;
+    
+}
+
+
+.Wellcome{
+    padding: 100px 0px 20px 0px;
+}
+
+.sel{
+    padding:30px 0px 30px 0px; 
+}
+
+.loc{
+    padding: 40px 0px 0px 0px;
+}
+
+.space{
+    height: 100px;
+}
+
+.opbtn{
+    padding: 5px !important;
+}
+
+.ctn{
+    padding: 40px 0px 40px 0px;
+}

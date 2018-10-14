@@ -9,7 +9,8 @@ export class MyserviceService {
   constructor(private _http: HttpClient) { }
 
   submitRegister(body:any){
-      return this._http.post('http://localhost:4000/authentication-service/log',body,{
+    
+      return this._http.post('http://localhost:4000/authenticate/reg',body,{
         observe:'body'
       })
   }

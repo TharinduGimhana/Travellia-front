@@ -12,6 +12,7 @@ import { MyserviceService } from '../myservice.service';
 export class AuthenticationComponent implements OnInit {
 
     myForm:FormGroup;
+    successMessage = '';
   constructor(private _myservice: MyserviceService) { 
     this.myForm = new FormGroup({
       firstName: new FormControl(null, Validators.required),
@@ -22,6 +23,7 @@ export class AuthenticationComponent implements OnInit {
   }
 
   ngOnInit() {
+   
  
   }
 
@@ -36,10 +38,10 @@ export class AuthenticationComponent implements OnInit {
   register(){
     console.log(this.myForm.value);
     this._myservice.submitRegister(this.myForm.value)
-    // .subscribe(
-    //   data => this.successMessage = 'Registration success',
-    //   error => this.successMessage = 'Some error'
-    // )
+    .subscribe(
+      data => this.successMessage = 'Registration success',
+      error => this.successMessage = 'Some error'
+    );
   }
 
 }

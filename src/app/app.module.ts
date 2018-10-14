@@ -12,6 +12,10 @@ import { HotelComponent } from './hotel/hotel.component';
 import { DestinationComponent } from './destination/destination.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { AddpropertyoneComponent } from './addpropertyone/addpropertyone.component';
+import { AdddestinationComponent } from './adddestination/adddestination.component';
+import { AddpropertytwoComponent } from './addpropertytwo/addpropertytwo.component';
+import { AddpropertythreeComponent } from './addpropertythree/addpropertythree.component';
 
 
 
@@ -24,6 +28,10 @@ import { RouterModule } from '@angular/router';
     HotellistComponent,
     HotelComponent,
     DestinationComponent,
+    AddpropertyoneComponent,
+    AdddestinationComponent,
+    AddpropertytwoComponent,
+    AddpropertythreeComponent,
 
 
 
@@ -43,6 +51,18 @@ import { RouterModule } from '@angular/router';
       {
         path: '',
         component: HomeComponent
+      },
+      {
+        path: 'destination',
+        component: DestinationComponent
+      },
+      {
+        path: 'hotel',
+        component: HotelComponent
+      },
+      {
+        path: 'hotellist',
+        component: HotellistComponent
       }
     ])
 
