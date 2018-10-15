@@ -2,8 +2,8 @@ import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { MyserviceService } from '../myservice.service';
-import { RouterModule,Routes,ActivatedRoute,NavigationEnd  } from '@angular/router';
-import { Router } from '@angular/router'; 
+import { RouterModule, Routes, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 
@@ -17,7 +17,7 @@ export class AuthenticationComponent implements OnInit {
   myForm: FormGroup;
   loginForm: FormGroup;
   successMessage = '';
-  constructor(private _myservice: MyserviceService,private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private _myservice: MyserviceService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.myForm = new FormGroup({
       firstName: new FormControl(null, Validators.required),
       lastName: new FormControl(null, Validators.required),
@@ -32,11 +32,11 @@ export class AuthenticationComponent implements OnInit {
       }
     );
 
-    
+
   }
 
   ngOnInit() {
-    
+
 
   }
 
@@ -65,7 +65,7 @@ export class AuthenticationComponent implements OnInit {
   }
 
   login() {
-    
+
     console.log(this.loginForm.value);
     if (this.loginForm.valid) {
       this._myservice.login(this.loginForm.value)
@@ -80,7 +80,7 @@ export class AuthenticationComponent implements OnInit {
     }
   }
 
-  logout(){
+  logout() {
     localStorage.removeItem('token');
     this.router.navigate(['/authentication']);
   }

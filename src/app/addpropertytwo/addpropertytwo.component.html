@@ -44,12 +44,12 @@
 </div>
 
 
-<div class="container">
+<div class="container"  [formGroup]="addpropertytwo">
   <div class="row sel">
     <div class="col-lg-6">
       
       <label>Room type</label><br>
-      <select class="browser-default">
+      <select class="browser-default" formControlName="roomtype">
         <option value="" disabled selected>Select type</option>
         
         <option value="2">One </option>
@@ -67,7 +67,7 @@
     <div class="col-lg-6">
       
       <label>Number of rooms in this type</label><br>
-      <select class="browser-default">
+      <select class="browser-default" formControlName="number">
         <option value="" disabled selected>Select</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -85,7 +85,7 @@
   <div class="row">
       <div class="col-lg-6">
         <div class="md-form">
-          <textarea mdbInputDirective type="text" id="form7" class="md-textarea form-control" rows="3"></textarea>
+          <textarea mdbInputDirective type="text" id="form7" class="md-textarea form-control" rows="3" formControlName="description"></textarea>
           <label for="form7">Give the small description about that rooms</label>
         </div>
       </div>
@@ -95,7 +95,7 @@
     <div class="row ">
         <div class="col-lg-6">
           <div class="md-form">
-            <input mdbInputDirective type="text" id="form3" class="form-control">
+            <input mdbInputDirective type="text" id="form3" class="form-control" formControlName="price">
             <label for="form3" class="">Base price per night</label>
           </div>
   
@@ -105,10 +105,16 @@
 
       <div class="row cont">
           <div class="col-lg-6">
-            <button mdbBtn type="button" color="secondary" class="waves-light" mdbWavesEffect>Add</button>
+            <button mdbBtn type="button" color="secondary" class="waves-light" mdbWavesEffect (click)="add()">Add</button>
     
           </div>
+          
           <div class="col-lg-6"></div>
+        </div>
+        <div class="row">
+          <div class="" style="text-align:center;padding: 5px 15px 5px 15px;">
+            {{successMessage}}
+          </div>
         </div>
 
         <div class="row ctn">

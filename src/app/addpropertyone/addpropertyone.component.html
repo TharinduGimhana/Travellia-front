@@ -35,12 +35,12 @@
   </div>
 
 
-  <div class="container">
+  <div class="container" [formGroup]="addpropertyone">
 
     <div class="row">
       <div class="col-lg-6">
         <div class="md-form">
-          <input mdbInputDirective type="text" id="form1" class="form-control">
+          <input mdbInputDirective type="text" formControlName="name" id="form1" class="form-control">
           <label for="form1" class="">What is the name of your property</label>
         </div>
       </div>
@@ -50,7 +50,7 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="md-form">
-          <textarea mdbInputDirective type="text" id="form7" class="md-textarea form-control" rows="3"></textarea>
+          <textarea mdbInputDirective type="text" id="form7" formControlName="description" class="md-textarea form-control" rows="3"></textarea>
           <label for="form7">Give the small description about your property</label>
         </div>
       </div>
@@ -59,15 +59,15 @@
 
     <div class="row">
       <div class="col-lg-6">
-        <label>Star Rating</label><br>
-        <select class="browser-default">
+        <label>Star Rating</label><br> 
+        <select class="browser-default" formControlName="star">
           <option value="" disabled selected>Choose your option</option>
-          <option value="1">N/A</option>
-          <option value="2">One star</option>
-          <option value="3">Two star</option>
-          <option value="3">Three star</option>
-          <option value="3">Four star</option>
-          <option value="3">Five star</option>
+          <option value="no star">N/A</option>
+          <option value="One star">One star</option>
+          <option value="Two star">Two star</option>
+          <option value="Three star">Three star</option>
+          <option value="Four star">Four star</option>
+          <option value="Five star">Five star</option>
         </select>
         <div class="col-lg-6"></div>
       </div>
@@ -77,7 +77,7 @@
       <div class="col-lg-6">
         <h4>What are the contact details for this property</h4>
         <div class="md-form">
-          <input mdbInputDirective type="text" id="form2" class="form-control">
+          <input mdbInputDirective type="text" id="form2" formControlName="contactname" class="form-control">
           <label for="form2" class="">Contact name</label>
         </div>
         <div class="col-lg-6"></div>
@@ -87,7 +87,7 @@
     <div class="row ">
       <div class="col-lg-6">
         <div class="md-form">
-          <input mdbInputDirective type="text" id="form3" class="form-control">
+          <input mdbInputDirective type="text" id="form3" formControlName="contactno" class="form-control">
           <label for="form3" class="">Contact Number</label>
         </div>
 
@@ -98,8 +98,9 @@
     <div class="row loc">
       <div class="col-lg-6">
         <h4>Where is your property located</h4>
-        <div class="md-form">
-          <input mdbInputDirective type="text" id="form4" class="form-control">
+        <div class="md-form" [formGroup]="addproperty">
+     
+      <input mdbInputDirective type="text" id="form4" formControlName="address" class="form-control">
           <label for="form4" class="">Address</label>
         </div>
 
@@ -110,7 +111,7 @@
     <div class="row ">
       <div class="col-lg-6">
         <div class="md-form">
-          <input mdbInputDirective type="text" id="form5" class="form-control">
+          <input mdbInputDirective type="text" id="form5" formControlName="city" class="form-control">
           <label for="form5" class="">City</label>
         </div>
 
@@ -121,7 +122,7 @@
     <div class="row ">
       <div class="col-lg-6">
         <div class="md-form">
-          <input mdbInputDirective type="text" id="form6" class="form-control">
+          <input mdbInputDirective type="text" formControlName="postalcode" id="form6" class="form-control">
           <label for="form6" class="">Post code</label>
         </div>
 
@@ -131,7 +132,7 @@
 
     <div class="row cont">
       <div class="col-lg-6">
-          <a routerLink='/addpropertytwo'><button mdbBtn type="button" color="secondary" class="waves-light" mdbWavesEffect>Continue</button></a>
+          <a routerLink='/addpropertytwo'><button mdbBtn type="button" color="secondary" (click)="add()" class="waves-light" mdbWavesEffect>Continue</button></a>
 
       </div>
       <div class="col-lg-6"></div>
