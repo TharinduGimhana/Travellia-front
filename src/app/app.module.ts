@@ -16,6 +16,7 @@ import { AddpropertyoneComponent } from './addpropertyone/addpropertyone.compone
 import { AdddestinationComponent } from './adddestination/adddestination.component';
 import { AddpropertytwoComponent } from './addpropertytwo/addpropertytwo.component';
 import { AddpropertythreeComponent } from './addpropertythree/addpropertythree.component';
+import { PropertiesComponent } from './properties/properties.component';
 
 
 
@@ -32,6 +33,7 @@ import { AddpropertythreeComponent } from './addpropertythree/addpropertythree.c
     AdddestinationComponent,
     AddpropertytwoComponent,
     AddpropertythreeComponent,
+    PropertiesComponent,
 
 
 
@@ -63,7 +65,12 @@ import { AddpropertythreeComponent } from './addpropertythree/addpropertythree.c
       {
         path: 'hotellist',
         component: HotellistComponent
+      },
+      {
+        path: 'properties',
+        component: PropertiesComponent
       }
+
     ])
 
   ],
