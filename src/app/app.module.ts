@@ -69,6 +69,18 @@ import { PropertiesComponent } from './properties/properties.component';
       {
         path: 'properties',
         component: PropertiesComponent
+      },
+      {
+        path: 'Addpropertyone',
+        component: AddpropertyoneComponent
+      },
+      {
+        path: 'addpropertytwo',
+        component: AddpropertytwoComponent
+      },
+      {
+        path: 'addpropertythree',
+        component: AddpropertythreeComponent
       }
 
     ])

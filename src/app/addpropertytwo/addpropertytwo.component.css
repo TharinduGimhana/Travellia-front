@@ -7,7 +7,7 @@
 
 
 .Wellcome{
-    padding: 100px 0px 20px 0px;
+    padding: 80px 0px 20px 0px;
 }
 
 .sel{
@@ -29,3 +29,8 @@
 .ctn{
     padding: 40px 0px 40px 0px;
 }
+
+.back{
+    padding: 80px 0px 0px 0px;
+}
+

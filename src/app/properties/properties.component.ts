@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule,Routes,ActivatedRoute,NavigationEnd  } from '@angular/router';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-properties',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertiesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
+
+  logout(){
+    localStorage.removeItem('token');
+    this.router.navigate(['/authentication']);
+  }
 }
+

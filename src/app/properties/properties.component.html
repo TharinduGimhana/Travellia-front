@@ -19,7 +19,9 @@
           </ul>
           <ul class="  nav-item navbar-nav ">
             <li class="nav-item">
-                <a routerLink='/authentication'><a class="nav-link waves-light" href="#" mdbWavesEffect>Logout</a></a>
+  
+                <button mdbBtn color="purple" class="waves-light2" (click)="logout()" mdbWavesEffect>Logout</button>
+                <!-- <a class="nav-link waves-light" href="#" mdbWavesEffect (click)="logout()">Logout</a> -->
             </li>
           </ul>
          
@@ -28,3 +30,12 @@
 </div>
 
 <!-- nav bar -->
+
+
+<div class="container">
+  <div class="row addprp">
+    <div class="col-lg-12">
+      <a routerLink='/Addpropertyone'><button mdbBtn type="button" color="purple" class="waves-light" mdbWavesEffect>Add New Property</button></a>
+    </div>
+  </div>
+</div>
