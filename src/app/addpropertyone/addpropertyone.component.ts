@@ -23,6 +23,22 @@ export class AddpropertyoneComponent implements OnInit {
       address: new FormControl(null, Validators.required),
       postalcode: new FormControl(null, Validators.required),
       star: new FormControl(null, Validators.required),
+      roomtype1: new FormControl(null, Validators.required),
+      quntity1: new FormControl(null, Validators.required),
+      sleeps1: new FormControl(null, Validators.required),
+      price1: new FormControl(null, Validators.required),
+      roomtype2: new FormControl(null, Validators.required),
+      quntity2: new FormControl(null, Validators.required),
+      sleeps2: new FormControl(null, Validators.required),
+      price2: new FormControl(null, Validators.required),
+      roomtype3: new FormControl(null, Validators.required),
+      quntity3: new FormControl(null, Validators.required),
+      sleeps3: new FormControl(null, Validators.required),
+      price3: new FormControl(null, Validators.required),
+      roomtype4: new FormControl(null, Validators.required),
+      quntity4: new FormControl(null, Validators.required),
+      sleeps4: new FormControl(null, Validators.required),
+      price4: new FormControl(null, Validators.required),
     
     });
 

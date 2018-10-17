@@ -39,4 +39,9 @@ export class AddpropertytwoComponent implements OnInit {
     }
   }
 
+  reset(){
+    localStorage.removeItem('successMessage');
+
+  }
+
 }

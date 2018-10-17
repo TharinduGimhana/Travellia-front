@@ -50,7 +50,8 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="md-form">
-          <textarea mdbInputDirective type="text" id="form7" formControlName="description" class="md-textarea form-control" rows="3"></textarea>
+          <textarea mdbInputDirective type="text" id="form7" formControlName="description" class="md-textarea form-control"
+            rows="3"></textarea>
           <label for="form7">Give the small description about your property</label>
         </div>
       </div>
@@ -59,7 +60,7 @@
 
     <div class="row">
       <div class="col-lg-6">
-        <label>Star Rating</label><br> 
+        <label>Star Rating</label><br>
         <select class="browser-default" formControlName="star">
           <option value="" disabled selected>Choose your option</option>
           <option value="no star">N/A</option>
@@ -98,9 +99,9 @@
     <div class="row loc">
       <div class="col-lg-6">
         <h4>Where is your property located</h4>
-        <div class="md-form" [formGroup]="addproperty">
-     
-      <input mdbInputDirective type="text" id="form4" formControlName="address" class="form-control">
+        <div class="md-form">
+
+          <input mdbInputDirective type="text" id="form4" formControlName="address" class="form-control">
           <label for="form4" class="">Address</label>
         </div>
 
@@ -130,9 +131,102 @@
       <div class="col-lg-6"></div>
     </div>
 
+
+    <div class="container">
+      <div class="row back">
+      </div>
+      <div class="row Wellcome-r">
+        <h3><b>Add rooms and pricing</b></h3>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Room type</th>
+            <th scope="col">Quntity</th>
+            <th scope="col">Sleeps</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              <select class="browser-default" formControlName="roomtype1" >
+                <option value="" disabled selected>Choose room type</option>
+                <option value="no star">Superior double room</option>
+                <option value="One star">Superior triple room</option>
+                <option value="Two star">Delux double room</option>
+                <option value="Three star">Premium room</option>
+              </select>
+
+            </th>
+            <td><input mdbInputDirective type="text" id="form1" class="form-control1" formControlName="quntity1"></td>
+            <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="sleeps1"></td>
+            <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="price1"></td>
+          </tr>
+
+          <tr>
+            <th scope="row">
+              <select class="browser-default" formControlName="roomtype2">
+                <option value="" disabled selected>Choose room type</option>
+                <option value="no star">Superior double room</option>
+                <option value="One star">Superior triple room</option>
+                <option value="Two star">Delux double room</option>
+                <option value="Three star">Premium room</option>
+              </select>
+
+            </th>
+            <td><input mdbInputDirective type="text" id="form1" class="form-control1" formControlName="quntity2"></td>
+            <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="sleeps2"></td>
+            <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="price2"></td>
+          </tr>
+
+          <tr>
+            <th scope="row">
+              <select class="browser-default" formControlName="roomtype3">
+                <option value="" disabled selected>Choose room type</option>
+                <option value="no star">Superior double room</option>
+                <option value="One star">Superior triple room</option>
+                <option value="Two star">Delux double room</option>
+                <option value="Three star">Premium room</option>
+              </select>
+
+            </th>
+            <td><input mdbInputDirective type="text" id="form1" class="form-control1" formControlName="quntity3"></td>
+            <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="sleeps3"></td>
+            <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="price3"></td>
+          </tr>
+
+          <tr>
+            <th scope="row">
+              <select class="browser-default" formControlName="roomtype4">
+                <option value="" disabled selected>Choose room type</option>
+                <option value="no star">Superior double room</option>
+                <option value="One star">Superior triple room</option>
+                <option value="Two star">Delux double room</option>
+                <option value="Three star">Premium room</option>
+              </select>
+
+            </th>
+            <td><input mdbInputDirective type="text" id="form1" class="form-control1" formControlName="quntity4"></td>
+            <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="sleeps4"></td>
+            <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="price4"></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+
+
+
     <div class="row cont">
       <div class="col-lg-6">
-          <a routerLink='/addpropertytwo'><button mdbBtn type="button" color="secondary" (click)="add()" class="waves-light" mdbWavesEffect>Continue</button></a>
+        <button mdbBtn type="button" color="secondary" (click)="add()" class="waves-light"
+            mdbWavesEffect>Continue</button>
 
       </div>
       <div class="col-lg-6"></div>
