@@ -1,0 +1,36 @@
+.nav-bar{
+    padding: 0px;
+    position: fixed;
+    z-index: 1;
+    
+}
+
+.back{
+    padding: 100px 0px 20px 0px;
+}
+
+
+.adddes{
+    padding: 20px 0px 20px 0px;
+}
+
+.body{
+    padding: 20px 0px 20px 0px;
+}
+
+.addbtn{
+    padding: 0px 0px 20px 0px;
+}
+
+.pick{
+    padding: 5px !important;
+}
+
+.uploadbtn{
+    padding: 7px !important;
+    margin-bottom: 30px;
+}
+
+.space{
+    height: 100px;
+}

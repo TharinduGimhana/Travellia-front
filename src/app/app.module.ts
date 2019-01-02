@@ -17,6 +17,8 @@ import { AdddestinationComponent } from './adddestination/adddestination.compone
 import { AddpropertytwoComponent } from './addpropertytwo/addpropertytwo.component';
 import { AddpropertythreeComponent } from './addpropertythree/addpropertythree.component';
 import { PropertiesComponent } from './properties/properties.component';
+import { AdminComponent } from './admin/admin.component';
+// import { FileSelectDirective } from 'ng2-file-upload';
 
 
 
@@ -34,6 +36,7 @@ import { PropertiesComponent } from './properties/properties.component';
     AddpropertytwoComponent,
     AddpropertythreeComponent,
     PropertiesComponent,
+    AdminComponent,
 
 
 
@@ -45,6 +48,7 @@ import { PropertiesComponent } from './properties/properties.component';
     Materials,
     HttpClientModule,
     BrowserAnimationsModule,
+    // FileSelectDirective,
     RouterModule.forRoot([
       {
         path:'authentication',
@@ -81,6 +85,14 @@ import { PropertiesComponent } from './properties/properties.component';
       {
         path: 'addpropertythree',
         component: AddpropertythreeComponent
+      },
+      {
+        path: 'admin',
+        component: AdminComponent
+      },
+      {
+        path: 'adddest',
+        component: AdddestinationComponent
       }
 
     ])

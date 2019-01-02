@@ -1,7 +1,7 @@
 <!-- nav-bar -->
 
 <div class="container-fluid nav-bar">
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple">
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple" [containerInside]="false">
     <mdb-navbar-brand>
       <a class="navbar-brand" href="#">TRAVELLIA.com</a>
     </mdb-navbar-brand>
@@ -154,7 +154,7 @@
         <tbody>
           <tr>
             <th scope="row">
-              <select class="browser-default" formControlName="roomtype1" >
+              <select class="browser-default" formControlName="roomtype1">
                 <option value="" disabled selected>Choose room type</option>
                 <option value="no star">Superior double room</option>
                 <option value="One star">Superior triple room</option>
@@ -215,18 +215,147 @@
             <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="sleeps4"></td>
             <td><input mdbInputDirective type="text" id="form2" class="form-control1" formControlName="price4"></td>
           </tr>
-          
+
         </tbody>
       </table>
     </div>
+
+
+    <!-- add main image -->
+
+    <div class="row">
+      <h4>Add main view image of your property</h4>
+    </div>
+
+    <div class="row">
+      <img [src]="imageUrl" style="width:250px;height:200px">
+    </div>
+
+    <div class="row addbtn">
+      <div id="fileselector">
+        <input style="display:none;" #fileInput type="file"  id="fileUpload" (change)="onFileSelected($event)"
+          (change)="handleFileInput($event.target.files)" accept="image/*">
+      </div>
+    </div>
+
+    <div class="row">
+      <button (click)="fileInput.click()" class="pick" mdbBtn type="button" color="secondary" outline="true"
+        mdbWavesEffect>Pick a photo</button>
+    </div>
+
+    <div class="row">
+      <button mdbBtn type="button" (click)="onUpload()"  color="pink" class="waves-light uploadbtn" mdbWavesEffect>Upload</button>
+    </div>
+
+
+    <!-- add main image -->
+
+
+
+    <!-- five images -->
+
+
+    <!-- <div class="row">
+      <h4>Add four images in your property</h4>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="row">
+          <img [src]="imageUrltwo" style="width:250px;height:200px">
+        </div>
+
+        <div class="row addbtn">
+          <div id="fileselector">
+            <input style="display:none;" #fileInputtwo type="file" name="hotelimage" id="fileUploadtwo" (change)="onFileSelected($event)"
+              (change)="handleFileInputtwo($event.target.files)" accept="image/*">
+          </div>
+        </div>
+
+        <div class="row">
+          <button (click)="fileInputtwo.click()" class="pick" mdbBtn type="button" color="secondary" outline="true"
+            mdbWavesEffect>Pick a photo</button>
+        </div>
+
+        <div class="row">
+          <button mdbBtn type="button" (click)="onUpload()" color="pink" class="waves-light uploadbtn" mdbWavesEffect>Upload all</button>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3">
+        <div class="row">
+          <img [src]="imageUrlthree" style="width:250px;height:200px">
+        </div>
+
+        <div class="row addbtn">
+          <div id="fileselector">
+            <input style="display:none;" #fileInput type="file" name="hotelimage" id="fileUpload" (change)="onFileSelected($event)"
+              (change)="handleFileInputthree($event.target.files)" accept="image/*">
+          </div>
+        </div>
+
+        <div class="row">
+          <button (click)="fileInput.click()" class="pick" mdbBtn type="button" color="secondary" outline="true"
+            mdbWavesEffect>Pick a photo</button>
+        </div>
+    
+      </div>
+
+
+      <div class="col-lg-3">
+        <div class="row">
+          <img [src]="imageUrlfour" style="width:250px;height:200px">
+        </div>
+
+        <div class="row addbtn">
+          <div id="fileselector">
+            <input style="display:none;" #fileInput type="file" name="hotelimage" id="fileUpload" (change)="onFileSelected($event)"
+              (change)="handleFileInputfour($event.target.files)" accept="image/*">
+          </div>
+        </div>
+
+        <div class="row">
+          <button (click)="fileInput.click()" class="pick" mdbBtn type="button" color="secondary" outline="true"
+            mdbWavesEffect>Pick a photo</button>
+        </div>     
+      </div>
+
+
+      <div class="col-lg-3">
+        <div class="row">
+          <img [src]="imageUrlfive" style="width:250px;height:200px">
+        </div>
+
+        <div class="row addbtn">
+          <div id="fileselector">
+            <input style="display:none;" #fileInput type="file" name="hotelimage" id="fileUpload" (change)="onFileSelected($event)"
+              (change)="handleFileInputfive($event.target.files)" accept="image/*">
+          </div>
+        </div>
+
+        <div class="row">
+          <button (click)="fileInput.click()" class="pick" mdbBtn type="button" color="secondary" outline="true"
+            mdbWavesEffect>Pick a photo</button>
+        </div>
+
+      </div>
+    </div> -->
+
+
+    <!-- five images -->
+
+
+
+
+
 
 
 
 
     <div class="row cont">
       <div class="col-lg-6">
-        <button mdbBtn type="button" color="secondary" (click)="add()" class="waves-light"
-            mdbWavesEffect>Continue</button>
+        <button mdbBtn type="button" color="secondary" (click)="addpr()" class="waves-light" mdbWavesEffect>Continue</button>
 
       </div>
       <div class="col-lg-6"></div>

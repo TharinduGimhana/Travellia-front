@@ -1,7 +1,7 @@
 <!-- nav-bar -->
 
 <div class="container-fluid nav-bar">
-    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple">
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple" [containerInside]="false">
         <mdb-navbar-brand>
             <a class="navbar-brand" href="#">TRAVELLIA.com</a>
         </mdb-navbar-brand>
@@ -63,12 +63,16 @@
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
-              <button mdbBtn color="default" class="waves-light" (click)="login()" mdbWavesEffect>Login</button>
+              <button mdbBtn color="default" class="waves-light" (click)="login()" mdbWavesEffect>Sign in</button>
             </div>
+            <button type="button" class="signup" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+            (click)="frame2.show()" mdbWavesEffect>Sign Up</button>
+    
 
             
             <div class="" style="text-align:center;">
-             
+              <p>              </p>
+              {{successMessage}}
             </div>
           </div>
         </div>
@@ -84,8 +88,8 @@
       <!-- signup -->
 
 
-      <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
-        (click)="frame2.show()" mdbWavesEffect>Sign Up</button>
+      <!-- <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+        (click)="frame2.show()" mdbWavesEffect>Sign Up</button> -->
 
       <div  [formGroup]="myForm" mdbModal #frame2="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
         aria-labelledby="myModalLabel" aria-hidden="true">

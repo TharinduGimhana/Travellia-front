@@ -35,7 +35,7 @@
 
 .main-body{
     padding: 100px 150px 50px 150px;
-    background-image: url(../../assets/bg3.jpg);
+    background-image: url(../../assets/bg5.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -88,5 +88,11 @@
    .card-title{
        padding: 0px;
    }
+
+
+   .imgct img {
+     height: 100px !important;
+   }
+  
 
    /* card */

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import 'rxjs/Rx';  
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +11,22 @@ export class MyserviceService {
 
 // authentication
 
-  submitRegister(body:any){
+//   submitRegister(body:any){
     
-      return this._http.post('http://localhost:4000/authenticate/reg',body,{
-        observe:'body'
-      })
-  }
+//       return this._http.post('http://localhost:4000/authenticate/reg',body,{
+//         observe:'body'
+//       })
+//   }
 
-  login(body:any){
+//   login(body:any){
     
-    return this._http.post('http://localhost:4000/authenticate/signin',body,{
-      observe:'body'
-    })
-}
+//     return this._http.post('http://localhost:4000/authenticate/signin',body,{
+//       observe:'body'
+//     })
+
+
+    
+// }
 
 
 // authentication
@@ -31,12 +35,12 @@ export class MyserviceService {
 
 // addpropertyone
 
-addp(body:any){
+// addprp(body:any){
     
-  return this._http.post('http://localhost:4000/properties/property',body,{
-    observe:'body'
-  })
-}
+//   return this._http.post('http://localhost:4000/properties/property',body,{
+//     observe:'body'
+//   })
+// }
 
 
 // addpropertyone
@@ -54,6 +58,33 @@ addptwo(body:any){
 }
 
 
+
 // addpropertytwo
 
+
+
+
+
+// addd(body:any){
+    
+//   return this._http.post('http://localhost:4000/dest/dest',body,{
+//     observe:'body'
+//   })
+// }
+
+
+
+getHotels() {
+  return this._http.get('http://localhost:4000/dest/dest').map((res:Response)=>res.json());
 }
+
+
+}
+
+
+
+
+
+
+
+

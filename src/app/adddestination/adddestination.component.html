@@ -1,3 +1,113 @@
-<p>
-  adddestination works!
-</p>
+<!-- nav bar -->
+
+<div class="container-fluid nav-bar">
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple " [containerInside]="false">
+    <mdb-navbar-brand>
+      <a class="navbar-brand" href="#">TRAVELLIA.com</a>
+    </mdb-navbar-brand>
+    <links>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a routerLink=''><a class="nav-link waves-light" href="#" mdbWavesEffect> <span class="sr-only">(current)</span></a></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" href="#" mdbWavesEffect></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" href="#" mdbWavesEffect></a>
+        </li>
+      </ul>
+
+    </links>
+  </mdb-navbar>
+</div>
+
+<!-- nav bar -->
+
+
+
+<div class="container body" [formGroup]="adddest">
+  <div class="row back">
+    <div class="col-lg-12">
+      <a routerLink='/admin'><button mdbBtn type="button" color="purple" class="waves-light" mdbWavesEffect>Back</button></a>
+    </div>
+  </div>
+
+  <div class="row adddes">
+    <h3><b>Add new destination</b></h3>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="md-form">
+        <input mdbInputDirective type="text" formControlName="desname" id="form1" class="form-control">
+        <label for="form1" class="">What is the name of destination</label>
+      </div>
+    </div>
+    <div class="col-lg-6"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="md-form">
+        <input mdbInputDirective type="text" formControlName="address" id="form2" class="form-control">
+        <label for="form1" class="">Address of destination</label>
+      </div>
+    </div>
+    <div class="col-lg-6"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="md-form">
+        <!-- <textarea mdbInputDirective type=text" id="form7" formControlName="descrion" class="md-textarea form-control"
+          rows="3"></textarea>  -->
+          <textarea mdbInputDirective type="text" id="form7" formControlName="description" class="md-textarea form-control"
+            rows="3"></textarea>
+        <label for="form7">Give the small description about destination</label>
+      </div>
+    </div>
+    <div class="col-lg-6"></div>
+  </div>
+
+
+
+  <div class="row">
+    <h4>Add main view image of your property</h4>
+  </div>
+
+  <div class="row">
+    <img [src]="imageUrl" style="width:250px;height:200px">
+  </div>
+
+  <div class="row addbtn">
+    <div id="fileselector">
+      <input style="display:none;" #fileInput type="file" name="hotelimage" id="fileUpload" (change)="onFileSelected($event)"
+        (change)="handleFileInput($event.target.files)" accept="image/*">
+    </div>
+  </div>
+
+  <div class="row">
+    <button (click)="fileInput.click()" class="pick" mdbBtn type="button" color="secondary" outline="true"
+      mdbWavesEffect>Pick a photo</button>
+  </div>
+
+  <div class="row">
+    <button mdbBtn type="button" (click)="onUpload()" color="pink" class="waves-light uploadbtn" mdbWavesEffect>Upload</button>
+  </div>
+
+
+
+  
+  <div class="row cont">
+    <div class="col-lg-6">
+      <button mdbBtn type="button" color="secondary" (click)="add()" class="waves-light" mdbWavesEffect>Add</button>
+
+    </div>
+    <div class="col-lg-6"></div>
+  </div>
+
+  <div class="row space"></div>
+
+</div>

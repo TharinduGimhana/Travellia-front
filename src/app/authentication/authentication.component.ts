@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
-import { MyserviceService } from '../myservice.service';
+import { AuthenticationService } from './authentication.service';
 import { RouterModule, Routes, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -17,7 +17,7 @@ export class AuthenticationComponent implements OnInit {
   myForm: FormGroup;
   loginForm: FormGroup;
   successMessage = '';
-  constructor(private _myservice: MyserviceService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private _myservice: AuthenticationService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.myForm = new FormGroup({
       firstName: new FormControl(null, Validators.required),
       lastName: new FormControl(null, Validators.required),
