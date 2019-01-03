@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import {Observable} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 
@@ -25,15 +26,19 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
+
+    
   }
 
   foods: Food[] = [
+
     {value: 'steak-0', viewValue: '1'},
     {value: 'pizza-1', viewValue: '2'},
     {value: 'tacos-2', viewValue: '3'},
     {value: 'steak-3', viewValue: '4'},
     {value: 'pizza-4', viewValue: '5'},
     {value: 'tacos-5', viewValue: '6'}
+
   ];
 
 // date-range-picker
@@ -43,12 +48,15 @@ export class HomeComponent implements OnInit {
   fromDate: NgbDate;
   toDate: NgbDate;
 
-  constructor(calendar: NgbCalendar) {
+  constructor(calendar: NgbCalendar,private router:Router,) {
+
     this.fromDate = calendar.getToday();
     this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
+
   }
 
   onDateSelection(date: NgbDate) {
+
     if (!this.fromDate && !this.toDate) {
       this.fromDate = date;
     } else if (this.fromDate && !this.toDate && date.after(this.fromDate)) {
@@ -57,18 +65,25 @@ export class HomeComponent implements OnInit {
       this.toDate = null;
       this.fromDate = date;
     }
+
   }
 
   isHovered(date: NgbDate) {
+
     return this.fromDate && !this.toDate && this.hoveredDate && date.after(this.fromDate) && date.before(this.hoveredDate);
+
   }
 
   isInside(date: NgbDate) {
+
     return date.after(this.fromDate) && date.before(this.toDate);
+
   }
 
   isRange(date: NgbDate) {
+
     return date.equals(this.fromDate) || date.equals(this.toDate) || this.isInside(date) || this.isHovered(date);
+
   }
 
 // date-range-picker
@@ -108,7 +123,10 @@ sel = (text$: Observable<string>) =>
 // sel-destinations
 
 
-
+  goToRoute(){
+    this.router.navigate(["/"+this.modeltwo]);
+    
+  }
 
 }
 
@@ -128,7 +146,7 @@ const des = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'Cali
 
 // review-destinations
 
-const sel = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado',
+const sel = ['Alabama', 'Ayesha', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado',
   'Connecticut', 'Delaware', 'District Of Columbia', 'Federated States Of Micronesia', 'Florida', 'Georgia',
   'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine',
   'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana',
@@ -138,4 +156,7 @@ const sel = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'Cali
   'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
 // review-destinations
+
+
+
 

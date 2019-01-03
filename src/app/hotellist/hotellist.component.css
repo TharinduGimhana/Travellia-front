@@ -55,7 +55,18 @@
    }
 
    .hotelpanel{
-    padding: 0px 100px 50px 100px;
+    padding: 0px 200px 50px 200px;
+   
+   }
+
+   .media{
+    padding: 15px;
+    animation: .3s;
+   }
+
+   .media:hover{
+    background-color: azure;
+    padding: 15px;
    }
 
      /*/ hotellist */

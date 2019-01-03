@@ -9,14 +9,27 @@ import { Router } from '@angular/router';
   templateUrl: './hotellist.component.html',
   styleUrls: ['./hotellist.component.css']
 })
+
+ 
 export class HotellistComponent implements OnInit {
 
   
- 
-  constructor(private _myservice: MyserviceService, private router: Router) { }
+ private hotelList;
+  constructor(private _myservice: MyserviceService, private router: Router,private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
 
+    
+    if(this.activeRoute.snapshot.params.id!=""){
+
+        this._myservice.getProp(this.activeRoute.snapshot.params.id).subscribe(data=>{
+          console.log("sasasa");
+          console.log(data);
+          this.hotelList=data;
+          console.log(this.hotelList);
+        },err=>{});
+
+    }
     
   } 
 

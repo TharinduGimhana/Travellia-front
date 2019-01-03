@@ -66,10 +66,7 @@ import { AdminComponent } from './admin/admin.component';
         path: 'hotel',
         component: HotelComponent
       },
-      {
-        path: 'hotellist',
-        component: HotellistComponent
-      },
+      
       {
         path: 'properties',
         component: PropertiesComponent
@@ -93,7 +90,11 @@ import { AdminComponent } from './admin/admin.component';
       {
         path: 'adddest',
         component: AdddestinationComponent
-      }
+      },
+      {
+        path: ':id',
+        component: HotellistComponent
+      },
 
     ])
 

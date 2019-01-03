@@ -79,6 +79,10 @@ getHotels() {
 }
 
 
+
+getProp(id){
+  return this._http.get('http://localhost:4000/properties/property/'+id);
+}
 }
 
 
